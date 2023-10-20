@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import { Button } from './components/common/Button';
+import DashBoard from './screens/Dashboard';
+
 
 function App() {
   return (
-    <Button/>
+    <DashBoard></DashBoard>
   );
 }
 
