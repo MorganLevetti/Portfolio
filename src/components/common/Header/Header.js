@@ -9,11 +9,11 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 function Header() {
   return (
-    <Toolbar>
+    <Toolbar sx={{backgroundColor: '#0b0b0c'}}>
       <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-        <MenuIcon />
+        <MenuIcon color='white'/>
       </IconButton>
-      <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+      <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, color: 'white' }}>
         test
       </Typography>
     </Toolbar>
