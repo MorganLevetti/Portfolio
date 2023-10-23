@@ -5,7 +5,8 @@ import DashBoard from './screens/Dashboard';
 
 function App() {
   return (
-    <DashBoard/>
+    // <DashBoard/>
+    <h1>bonjour</h1>
     
   );
 }
