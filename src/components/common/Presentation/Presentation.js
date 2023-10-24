@@ -5,13 +5,14 @@ function Presentation() {
   return (
     <>
     <Box className="md:block md:justify-center">
+       {/* container Text 1 */}
       <Box className="md:w-1/2 md:text-center m-8">
         <Typography
           sx={{
             fontSize: [45, 40],
-            marginTop: [8, 15], // Ajustez les marges pour mobile et ordinateur
+            marginTop: [6, 15], // Ajustez les marges pour mobile et ordinateur
             color: 'rgb(255, 165, 0)',
-            fontFamily: 'monospace',
+            fontFamily: 'revert-layer',
             textAlign: ['left', 'center'], // Centrer le texte sur mobile et ordinateur
           }}
         >
@@ -19,9 +20,9 @@ function Presentation() {
         </Typography>
         <Typography
           sx={{
-            fontSize: [26, 30],
+            fontSize: [22, 20],
             color: 'white',
-            fontFamily: 'monospace',
+            fontFamily: 'revert',
             textAlign: ['left', 'center'], // Centrer le texte sur mobile et ordinateur
           }}
         >
@@ -31,20 +32,21 @@ function Presentation() {
           sx={{
             fontSize: [20, 20],
             color: 'white',
-            fontFamily: 'initial',
+            fontFamily: 'revert',
             textAlign: ['left', 'center'], // Centrer le texte sur mobile et ordinateur
           }}
         >
-          Développeur <strong className='text-black border-2 p-1 bg-gray-100/50 rounded-lg'>Front-end</strong>,
+          Développeur <strong className='text-black border-2 p-1 bg-gray-100/50 rounded-lg'>Front-end</strong>.
         </Typography>
       </Box>
+      {/* container Text 2 */}
       <Box className="md:w-1/2 h-96 md:text-center m-8 mt-8">
         <ul>
           <Typography
             sx={{
               fontSize: [20, 20],
               color: 'white',
-              fontFamily: 'initial',
+              fontFamily: 'revert',
               textAlign: ['left', 'center'], // Centrer le texte sur mobile et ordinateur
             }}
           >
@@ -52,19 +54,19 @@ function Presentation() {
           </Typography>
           <Typography
             sx={{
-              fontSize: [20, 20],
+              fontSize: [18, 20],
               color: 'white',
-              fontFamily: 'initial',
+              fontFamily: 'revert',
               textAlign: ['left', 'center'], // Centrer le texte sur mobile et ordinateur
             }}
           >
-            <strong className='border-4 p-1 bg-green-200/50 border-green-400 rounded-lg'>React, MUI et Tailwind CSS</strong>
+            <strong className='border-2 p-1 bg-green-200/50 border-green-400 rounded-lg'>React, MUI et Tailwind CSS</strong>
           </Typography>
           <Typography
             sx={{
               fontSize: [20, 20],
               color: 'white',
-              fontFamily: 'initial',
+              fontFamily: 'revert',
               textAlign: ['left', 'center'], // Centrer le texte sur mobile et ordinateur
             }}
           >
@@ -74,13 +76,14 @@ function Presentation() {
             sx={{
               fontSize: [20, 20],
               color: 'white',
-              fontFamily: 'initial',
+              fontFamily: 'revert',
               textAlign: ['left', 'center'], // Centrer le texte sur mobile et ordinateur
             }}
           >
-            tout en se concentrant sur une conception utilisateur <strong className='border-2 p-1 rounded-lg border-pink-400 bg-pink-200/50'>(UI/UX)</strong>
+            tout en se concentrant sur une conception utilisateur <strong className='border-2 p-1 rounded-lg border-pink-400 bg-pink-200/50'>(UI/UX)</strong>.
           </Typography>
         </ul>
+        {/* Media */}
         <ul className='flex text-center mt-10'>
           <Typography className='p-2 flex bg-gray-200/50 rounded-lg'>
             <Box className="p-1">
@@ -95,7 +98,6 @@ function Presentation() {
                 c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319
                 c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995
                 C310,145.43,300.549,94.761,230.454,94.761z"/>
-      
             </svg>
               </a>
           </Box>
@@ -108,10 +110,12 @@ function Presentation() {
           </Typography>
         </ul>
       </Box>
-      <Box className="border md:mt-8 mt-8 h-96"> {/* Ajustez la marge pour mobile et ordinateur */}
+      {/* Box 1 */}
+      <Box className="border md:mt-8 mt-8 h-96">
         Contenu de la boîte 1
       </Box>
-      <Box className="border md:mt-8 mt-8 h-96"> {/* Ajustez la marge pour mobile et ordinateur */}
+      {/* Box 2 */}
+      <Box className="border md:mt-8 mt-8 h-96"> 
         Contenu de la boîte 2
       </Box>
     </Box>
