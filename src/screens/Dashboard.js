@@ -8,9 +8,9 @@ class DashBoard extends Component {
     render() {
       return (
         <div>
-          <BackgroundParticules/>
           <Header/>
           <Presentation/>
+          <BackgroundParticules/>
         </div>
       );
     }

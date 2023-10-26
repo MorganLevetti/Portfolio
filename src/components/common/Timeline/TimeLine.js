@@ -6,46 +6,81 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import Typography from '@mui/material/Typography'
 import TimelineDot from '@mui/lab/TimelineDot';
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
+import VerifiedIcon from '@mui/icons-material/Verified';
+import AOS from 'aos';
+import { useEffect } from 'react'
+import 'aos/dist/aos.css';
 
 export default function TimeLine() {
+  useEffect(() => {
+    AOS.init(); // Initialisez AOS
+  }, []);
   return (
     <Timeline className='mt-8 ' position="alternate-reverse">
-      <TimelineItem>
+      <TimelineItem data-aos="fade-up">
         <TimelineSeparator>
-          <TimelineDot  color="secondary" />
+          <TimelineDot  color="secondary">
+             <LaptopMacIcon/>
+          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '10px', px: 2, color: 'white', mb: '20px' }}>
           <Typography variant="h6" component="span">
-            Eat
+            Intégrateur Ruby
           </Typography>
-          <Typography>Because you need strength</Typography>
-          <Typography sx={{color: 'purple'}}>2020</Typography>
+          <Typography>Basic Labs</Typography>
+          <Typography className='text-gray-400'>Ruby, OnRails</Typography>
+          <Typography sx={{color: '#9c27b0'}}>2020</Typography>
         </TimelineContent>
       </TimelineItem>
-      <TimelineItem>
+      <TimelineItem data-aos="fade-up">
         <TimelineSeparator>
-          <TimelineDot  color="success"/>
+          <TimelineDot  color="success">
+          <PhoneIphoneIcon/>
+          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '10px', px: 2, color: 'white', mb: '20px' }}>
           <Typography variant="h6" component="span">
-            Eat
+            Concepteur d'application
           </Typography>
-          <Typography>Because you need strength</Typography>
-          <Typography sx={{color: 'green'}}>2022</Typography>
+          <Typography>LaPlateforme</Typography>
+          <Typography className='text-gray-400'>ReactJs, Js, Linux</Typography>
+          <Typography sx={{color: '#2e7d32'}}>2021</Typography>
         </TimelineContent>
       </TimelineItem>
-      <TimelineItem>
+      <TimelineItem data-aos="fade-up">
         <TimelineSeparator>
-          <TimelineDot  color="primary"/>
+          <TimelineDot  color="primary">
+          <BookmarkAddedIcon/>
+          </TimelineDot>
+          <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '10px', px: 2, color: 'white', mb: '20px' }}>
           <Typography variant="h6" component="span">
-            Eat
+            Concepteur développeur, RI7
           </Typography>
-          <Typography>Because you need strength</Typography>
-          <Typography sx={{color: 'blue'}}>2023</Typography>
+          <Typography className='text-gray-400'>ReactJs, Laravel, PHP</Typography>
+          <Typography sx={{color: '#1976d2'}}>2022</Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem data-aos="fade-up">
+        <TimelineSeparator>
+        <TimelineConnector />
+          <TimelineDot  color="secondary">
+            <VerifiedIcon/>
+          </TimelineDot>
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '10px', px: 2, color: 'white', mb: '20px' }}>
+          <Typography variant="h6" component="span">
+          FullStack, Novanea
+          </Typography>
+          <Typography>CDI</Typography>
+          <Typography className='text-gray-400'>ReactJs, MUI, Laravel</Typography>
+          <Typography sx={{color: '#9c27b0'}}>2023</Typography>
         </TimelineContent>
       </TimelineItem>
     </Timeline>

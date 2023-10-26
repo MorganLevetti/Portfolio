@@ -9,7 +9,8 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 function Header() {
   return (
-    <Toolbar sx={{backgroundColor: '#7b79ff'}}>
+    <Toolbar>
+      {/* sx={{backgroundColor: '#7b79ff'}} */}
       <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
       </IconButton>
       <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, color: 'white' }}>

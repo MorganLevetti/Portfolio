@@ -1,21 +1,16 @@
-import { react } from "@babel/types";
-import particlesConfig from "./particulesconfig";
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import {loadSlim, loadFull} from 'tsparticles'
+import '../styles/particles.css'
 
 const BackgroundParticules = () => {
-    const particlesInit = useCallback(async engine => {
-        console.log(engine);
-        await loadFull(engine);
-    }, []);
-
-    const particlesLoaded = useCallback(async container => {
-        await console.log(container);
-    }, []);
     return(
         <>
-             <Particles options={particlesConfig} id="tsparticles"  init={particlesInit} loaded={particlesLoaded} />
+            <div class="page-bg"></div>
+
+            <div class="animation-wrapper">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            </div>
         </>
     )
 }
