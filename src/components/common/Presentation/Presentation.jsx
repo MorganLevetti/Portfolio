@@ -6,16 +6,31 @@ import github from '../../../assets/github-2.png'
 import log1 from '../../../assets/rudra.png'
 import log2 from '../../../assets/earth.png'
 import log3 from '../../../assets/rocket-spaceship.png'
+import react from '../../../assets/react.png'
+import javascript from '../../../assets/javascript.png'
+import typescript from '../../../assets/typescript.png'
+import laravel from '../../../assets/laravel-framework-logo.png'
 import log4 from '../../../assets/planet.png'
 import TimeLine from '../Timeline/TimeLine'
 import Tooltip from '@mui/material/Tooltip'
-import Paper from '@mui/material/Paper';
 import AOS from 'aos';
 import { useEffect } from 'react'
 import 'aos/dist/aos.css';
-
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 
 function Presentation() {
+  const [text] = useTypewriter({
+    words: ['Je suis Développeur', 'Je suis Designer'],
+    loop: 0,
+  })
+  const [code] = useTypewriter({
+    words: ['<p>Compétences</p', 'Compétences :'],
+    loop: 0,
+  })
+  const [title] = useTypewriter({
+    words: ['Hello World'],
+    loop: 0,
+  })
   useEffect(() => {
     AOS.init(); // Initialisez AOS
   }, []);
@@ -25,48 +40,40 @@ function Presentation() {
     <Box className="block">
       <Box className="lg:block lg:justify-center mx-auto lg:mx-10 mb-8">
         {/* container Text 1 */}
-          <img className="h-28 absolute -right-1" src={log2} alt="Logo" data-aos="fade-left"/>
-          <Box className="md:text-center m-8 lg:mx-10">
-          <Typography
-            sx={{
-              fontSize: [45, 40],
-              marginTop: [6, 15], // Ajustez les marges pour mobile et ordinateur
-              color: 'rgb(255, 165, 0)',
-              fontFamily: 'revert-layer',
-              textAlign: ['left', 'center'],
-              zIndex: 1, // Centrer le texte sur mobile et ordinateur
-              marginBottom: 8,
-            }}
-          >
-            Hello World!
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: [22, 20],
-              color: 'white',
-
-              fontFamily: 'revert',
-              textAlign: ['left', 'center'], // Centrer le texte sur mobile et ordinateur
-            }}
-            data-aos="fade-right"
-          >
-            Je suis <strong className='border-4 bg-indigo-400/50 border-indigo-500/75 p-1 rounded-lg'>Morgan Levetti</strong>,
-          </Typography>
+          <img className="h-28 absolute right-2" src={log2} alt="Logo" data-aos="fade-left"/>
+          <Box className="md:text-center m-8 lg:mx-10 mt-20">
+          <h1 className='text-white text-2xl mb-4 mt-10 font-bold'>
+              <span className='text-white-600 text-3xl '>
+                {title}
+              </span>
+              <span className='text-yellow-400'>
+                 <Cursor cursorStyle=' _'/>
+              </span>
+             
+            </h1>
+            <h1 className='text-white text-2xl mt-20'>
+              <span className='text-yellow-400 bold'>
+                {text}
+              </span>
+              <span className='text-yellow-400'>
+                 <Cursor cursorStyle=' _'/>
+              </span>
+             
+            </h1>
           <Typography
             sx={{
               fontSize: [20, 20],
               color: 'white',
-
               fontFamily: 'revert',
               textAlign: ['left', 'center'], // Centrer le texte sur mobile et ordinateur
             }}
             data-aos="fade-right"
           >
-            Développeur <strong className='text-black border-2 p-1 bg-gray-100/50 rounded-lg'>Front-end</strong>.
+            Développeur <strong>ReactJs / Laravel</strong>.
           </Typography>
         </Box>
         {/* container Text 2 */}
-        <Box className="h-96 md:text-center m-8 mt-8 lg:mx-10">
+        <Box className="h-96 md:text-center m-8 mt-8 lg:mx-10 mt-10">
           <ul>
             <Typography
               sx={{
@@ -78,7 +85,7 @@ function Presentation() {
               }}
               data-aos="fade-right"
             >
-              Un développeur front-end spécialisé dans
+              Un développeur spécialisé dans
             </Typography>
             <Typography
               sx={{
@@ -102,7 +109,7 @@ function Presentation() {
               }}
               data-aos="fade-right"
             >
-              qui s'efforce de créer des solutions <stong className="border-4 bg-yellow-200/50  border-yellow-400 rounded-lg p-1">web innovantes</stong>
+              qui s'efforce de créer des solutions web innovantes
             </Typography>
             <Typography
               sx={{
@@ -118,18 +125,18 @@ function Presentation() {
             </Typography>
           </ul>
             {/* Media */}
-          <ul className='flex text-center mt-10 justify-center'>
+          <ul className='flex text-center mt-20 justify-center'>
             <Box data-aos="fade-right" className="mr-4 p-4 transform transition-transform hover:-translate-y-1 hover:scale-110">
-              <a href='#'>
+              <a href='https://linkedin.com/in/morganlevetti'>
                 <Tooltip title="LinkdIN">
-                  <img className="h-24" src={linkdin} alt="Logo" />
+                  <img className="h-24" src={linkdin} alt="Linkdin" />
                 </Tooltip> 
               </a>
             </Box>
             <Box data-aos="fade-left" className="ml-4 transform transition-transform hover:-translate-y-1 hover:scale-110">
-              <a href='#'>
+              <a href='https://github.com/MorganLevetti'>
               <Tooltip title="Git Hub">
-                 <img className="h-28" src={github} alt="Logo" />
+                 <img className="h-28" src={github} alt="github" />
               </Tooltip>
               </a>
             </Box>
@@ -158,30 +165,51 @@ function Presentation() {
           <Typography 
             sx={{
               fontSize: 35,
+              marginTop: 20,
               color: 'white',
               textAlign: 'center',
               fontFamily: 'sans-serif', 
               }}
-              data-aos="zoom-in" data-aos-delay="200"
               >
-              Skills
+              {code}
+              <Cursor cursorStyle={'_'}/>
           </Typography>
           <Box
-                sx={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  justifyContent: 'center', // Ajoutez cette ligne pour centrer horizontalement
-                  '& > :not(style)': {
-                    m: 2,
-                    alignItems: 'center',
-                    width: 128,
-                    height: 128,
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              alignContent: 'center',
+              padding: 6,
+              '@media (min-width: 768px)': { // Taille typique d'un écran d'ordinateur portable
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                '& > :nth-child(odd)': {
+                  marginRight: '10px', // Marge pour aligner deux images par ligne
+                },
+                '& > :nth-child(even)': {
+                  marginLeft: '10px', // Marge pour aligner deux images par ligne
+                },
                   },
                 }}
               >
-            
+              <Tooltip title='JavaScript'>
+                <img className="h-32 my-6" src={javascript} alt="Logo" data-aos="zoom-in-right" data-aos-delay="200"/>
+              </Tooltip>
+              <Tooltip title='React Js'>
+                <img className="h-32 my-6" src={react} alt="Logo" data-aos="zoom-in-left" data-aos-delay="200"/>
+                </Tooltip>
+              <Tooltip title='TypeScript'>
+                 <img className="h-32 my-6" src={typescript} alt="Logo" data-aos="zoom-in-right" data-aos-delay="200"/>
+                 </Tooltip>
+              <Tooltip title='Laravel'>
+                <img className="h-32 my-6" src={laravel} alt="Logo" data-aos="zoom-in-left" data-aos-delay="200"/>
+                </Tooltip>
+                <img className="h-32 ml-60" src={log4} alt="Logo" data-aos="zoom-in-right" data-aos-delay="200"/>
           </Box>
-          <img className="h-32 absolute left-10" src={log4} alt="Logo" data-aos="zoom-in-right" data-aos-delay="200"/>
+          
         </Box>
       </Box>
     </Box>
