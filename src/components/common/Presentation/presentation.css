@@ -1,0 +1,58 @@
+.typo{
+    font-size: 32px;
+    background: -webkit-linear-gradient(#d44987, #972be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.typo2{
+    font-size: 72px;
+    background: -webkit-linear-gradient(#d44987, #972be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.typo3{
+    font-size: 2Opx;
+    background: -webkit-linear-gradient(#da3c8b, #ae64fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.typo4{
+    font-size: 2Opx;
+    background: -webkit-linear-gradient(#f5e148, #994f0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.typo5{
+    font-size: 2Opx;
+    background: -webkit-linear-gradient(#ef4f57, #530505);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.typo6{
+    font-size: 2Opx;
+    background: -webkit-linear-gradient(#4fa9f3, #0b0981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.textBasique{
+    text-shadow:0 0 20px #9b0b83,2px 3px 3px #141414, 0 0 100px #791b8e;color:#d41ee1;
+}
+.typo7{
+    font-size: 25px;
+    background: -webkit-linear-gradient(#d44987, #972be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.parcours{
+    margin-top: 380px;
+}
+
+.sky{
+    height: 840px;
+    width: max-content;
+    z-index: 999999;
+}
